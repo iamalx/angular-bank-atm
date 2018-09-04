@@ -6,18 +6,28 @@
 
 .display {
   flex-basis: 50vw;
-  background-color: darkslategrey;
+   background-color: #0B3954;
   color: white;
+  height: 350px;
+  
 }
 
 .options {
   flex-basis: 50vw;
+ 
 }
 
 .options-list {
   list-style: none;
+  margin-top: -10px;
 }
 
-.options-item {
-
+button {
+  background-color: #0BC9CD;
+  text-align: center;
+margin: 10px;
+padding: 10px;
+width: 150px;
+height: 50px;
+border: 2px solid black;
 }

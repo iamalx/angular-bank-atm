@@ -1,10 +1,51 @@
 .nav {
+  color: white;
   display:flex;
-  flex-flow:row nowrap;
+  /*flex-flow:row nowrap;*/
   list-style:none;
-  justify-content:space-between;
-  align-items: stretch;
+  justify-content: center;
+
+  /*align-items: stretch;*/
+  
 }
-.nav li {
-  margin:0 auto;
+.nav a {
+  margin:0px;
+  width: 100px;
+  background-color: #0B3954;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  
+  
 }
+.nav a:hoover {
+  background-color: white;
+  
+  
+}
+a:link {
+  color: white;
+  text-decoration: none;
+
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+li:hoover {
+ background-color: white;
+    color: white;
+}
+
+
+
+/*1D8A99*/
+/*0BC9CD*/
+/*14FFF7*/
+/*8FBFE0*/
+/*7C77B9*/
+/*394F49*/
+/*0B3954*/
+/*009FB7*/

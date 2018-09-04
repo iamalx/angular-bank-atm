@@ -1,9 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ bankName }}
-  </h1>
-  <app-nav></app-nav>
-  <router-outlet></router-outlet>
+<div class= "views"> 
+<app-nav> </app-nav> 
 </div>
+<div class="wrapper" style="text-align:center">
+    <div class="header">
+        <h1>
+            {{ _bank.bankName}} 
+            <!--{{_bank.contactEmail}}-->
+          <!--<input type="text" [(ngModel)]="inputValue2">  {{inputValue2}}-->
+        </h1>
+    </div>
+
+    <div class="main">
+<router-outlet > </router-outlet>
+    </div>
+</div>
+
+
+
+
 

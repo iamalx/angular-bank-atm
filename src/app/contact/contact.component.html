@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <h1> Contact View</h1>
+    <div class="display">
+        <h3> Contact Us</h3>
+        <p>Please fill out all of the boxes correctly<br> and submit.
+        We will respond asap.<br>
+        Thank you.
+            </p>
+    </div>
+    <div class='form'>
+        <form>
+            <h3>Contact Form
+            </h3>
+            <p>Name
+            </p> 
+            <input type="text" value='' name=" " [value]='value2' [(ngModel)]="_bank.contactName" > 
+            <!--{{contactName}}-->
+             <p>Email
+            </p>
+            <input type='email' [value]='value2' name=' ' placeholder="@email.com"  [(ngModel)]="_bank.contactEmail" > 
+            <!--{{_bank.contactEmail}}-->
+             <p>Message
+            </p>
+            <textarea maxlength="250" rows="4" id='textarea'  type="text"  [value]='value2' name=" "   [(ngModel)]="_bank.contactMessage" > </textarea>
+            <!--{{_bank.contactMessage}}-->
+             {{alertMessage}}<br>
+             
+<input id="in" type="submit" value="Submit" (click)="submitFunct()" >    
+        </form>
+        
+    </div>
+        
+</div>

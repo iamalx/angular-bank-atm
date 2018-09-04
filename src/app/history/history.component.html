@@ -1,0 +1,11 @@
+ <section class="display">
+    <!-- Display: Customer information except for when inquiring about transaction -->
+    <h3>Customer Information:</h3>
+    {{display}}<br>
+    CurrentBalance:{{_bank.balance}}
+    <!-- Display: if inquiring about transactions -->
+    <h3>Last 3 Transactions</h3>
+    <p *ngFor ="let trans of _bank.transactions">
+      {{trans.date}} {{trans.type}} {{trans.amount}} {{trans.currency}}</p>
+    
+  </section>

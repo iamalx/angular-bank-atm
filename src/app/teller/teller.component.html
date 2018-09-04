@@ -1,37 +1,46 @@
 <h1>Teller View</h1>
+<router-outlet></router-outlet>
 <div class="main">
   <section class="display">
     <!-- Display: Customer information except for when inquiring about transaction -->
-    <h3>Customer Information</h3>
-    <p>Customer Name: First Last</p>
-    <p>Age: 100</p>
-    <p>Address: 1234 Test Lane.<br>
-      San Diego, CA 92000<br>
-      United States
+    <h3>Customer Information: </h3>
+    {{display}}
+    <p>Customer Name: {{_bank.fName}} {{_bank.lName}}</p>
+    <p>Age: {{_bank.age}}</p>
+    <p>Address: {{_bank.address.street}}<br> {{_bank.address.city}} {{_bank.address.state}} {{_bank.address.zip}}<br> {{_bank.address.country}}
     </p>
-    <br><br>
+
     <!-- Display: if inquiring about transactions -->
-    <h3>Last 3 Transactions</h3>
-    <p>[01-01-2018] -  Deposit ($20 USD)</p>
-    <p>[01-01-2018] -  Withdrawal ($40 USD)</p>
-    <p>[01-01-2018] -  Deposit ($20 USD)</p>
+    <!--<h3>Last 3 Transactions</h3>-->
+    <!--<p *ngFor ="let trans of _bank.transactions">-->
+    <!--  {{trans.date}} {{trans.type}} {{trans.amount}} {{trans.currency}}</p>-->
+
   </section>
+  
   <aside class="options">
     <section class="balance">
-      <!-- Display customer balance -->
-      $20.00 USD
+
+      <!-- Display customer balance -->CurrentBalance:{{_bank.balance}}<br><br>
+      <form> <input id='amount' [disabled]="isDisabled" name='yo' type='number' [value]='value1' [placeholder]='inputValue' [(ngModel)]="_bank.inputValue1">
+        <!--{{_bank.inputValue1}} -->
+        <input id='submitAmount' placeholder='Go' [disabled]="isDisabled" type='submit' (click)="transAmount()" name='i' /> <br> {{tellerMessage}}
+      </form>
+      <!-- placeholder= '' onfocus="value=''"-->
+      <!--<app-teller-trans (activate)='showTrans2($event)'> </app-teller-trans> -->
     </section>
     <!-- Add functionality to the buttons below -->
     <ul class="options-list">
       <li class="options-item">
-        <button>Widthdrawl for Customer</button>
+        <button routerLink="/teller" (click)="atmWithdrawal()">Widthdrawl for Customer</button>
       </li>
       <li class="options-item">
-        <button>Deposit for Customer</button>
+        <button (click)="atmDeposit()">Deposit for Customer</button>
       </li>
       <li class="options-item">
-        <button>Customer Transaction History</button>
+        <button (click)='showTrans2()'>Customer Transaction History</button>
+        <!--routerLink="history"-->
       </li>
     </ul>
   </aside>
 </div>
+<!--(click)= 'showTrans2()'-->

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { BankService  } from "../bank.service";
+
 
 @Component({
   selector: 'app-nav',

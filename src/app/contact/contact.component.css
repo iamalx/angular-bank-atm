@@ -1,0 +1,38 @@
+.wrapper{
+   
+}
+.display{
+position: absolute;
+flex-basis: 50vw;
+  background-color: #0B3954;
+  color: white;
+  height: 350px; 
+  width: 330px;
+ ;
+}
+.form {
+    position: absolute;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+     max-width:200px;
+}
+.form input {
+    width: 200px;
+   
+}
+ #in {
+    margin-top: 10px;
+    width: 70px;
+    height: 25px;
+    background-color: #8FBFE0;
+    color: black;
+    border: 1.5px solid  black;
+}
+#textarea {
+    width: 200px;
+    max-width:210px;
+    max-height: 100px;
+}    

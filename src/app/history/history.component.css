@@ -1,0 +1,11 @@
+.display {
+  position: absolute;
+  top: 59px;
+  left: 0px;
+
+  background-color: #0B3954;
+  color: white;
+  height: 350px;
+  width: 330px;
+}
+/*#0B3954;*/

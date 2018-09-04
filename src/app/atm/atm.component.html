@@ -1,24 +1,33 @@
 <h1>ATM View</h1>
+
 <div class="main">
   <section class="display">
-    > Welcome, Henry!
+   <h2> Welcome, {{_bank.fName}}!</h2>
+    <h4>Current Balance:{{_bank.balance}}</h4>
+    {{_bank.atmMessage}}<br>
+   
+    {{button}}
     <!-- Display Feedback information here -->
   </section>
   <aside class="options">
+  
     <!-- Add functionality to the buttons below -->
-    <ul class="options-list">
-      <li class="options-item">
-        <button>Make a Widthdrawl</button>
+    <ul class="options-list" >
+      <li  class="options-item">
+        <button routerLink= "options" (click)='atmWithdrawal()'>Make a Widthdrawl</button>
       </li>
       <li class="options-item">
-        <button>Deposit Money</button>
+        <button routerLink= "options" (click)='atmDeposit()'>Deposit Money</button>
+      </li> 
+      <li class="options-item">
+        <button  (click)='balanceButton()'>Balance Inquiry</button>
       </li>
       <li class="options-item">
-        <button>Balance Inquiry</button>
-      </li>
-      <li class="options-item">
-        <button>Transactions History</button>
+        <button routerLink ='history' (click)='transButton()'>Transactions History</button>
       </li>
     </ul>
+ 
   </aside>
+
 </div>
+<router-outlet ></router-outlet>
